@@ -25,12 +25,17 @@ export function TaskBoard() {
 		setNewTaskText(event.target.value);
 	}
 
-	function handleActiveTask(task: string) {
+	function changeTaskStatus(task: string) {
 		const newTaskArray = tasks.map(({ text, active }) => {
 			return { text, active: task === text ? !active : active };
 		}, []);
 
 		setTasks(newTaskArray);
+	}
+
+	function deleteTask(task: string) {
+		const filteredTasks = tasks.filter(({ text }) => text !== task);
+		setTasks(filteredTasks);
 	}
 
 	function handleTaskStatiscts() {
@@ -66,7 +71,8 @@ export function TaskBoard() {
 							key={text}
 							task={text}
 							active={active}
-							handleActiveTask={handleActiveTask}
+							onChangeTaskStatus={changeTaskStatus}
+							onDeleteTask={deleteTask}
 						/>
 					))}
 				</div>
