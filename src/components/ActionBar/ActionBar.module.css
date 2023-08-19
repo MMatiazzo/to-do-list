@@ -13,6 +13,9 @@
   border-radius: 8px;
   height: 3.25rem;
   width: 40%;
+
+  color: var(--gray-100);
+  padding: 1.25rem;
 }
 
 .actionbar > button {

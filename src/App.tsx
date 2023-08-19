@@ -1,4 +1,3 @@
-import { ActionBar } from './components/ActionBar/ActionBar';
 import { Header } from './components/Header/Header';
 import { TaskBoard } from './components/TaskBoard/TaskBoard';
 
@@ -8,7 +7,6 @@ function App() {
 	return (
 		<>
 			<Header />
-			<ActionBar />
 			<TaskBoard />
 		</>
 	);
