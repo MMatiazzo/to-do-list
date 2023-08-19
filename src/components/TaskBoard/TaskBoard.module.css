@@ -1,0 +1,36 @@
+.taskBoard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.taskBoard .taskLogs {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.taskBoard .taskLogs p:first-child {
+  color: var(--blue-300);
+  font-weight: bold;
+}
+
+.taskBoard .taskLogs p span:first-child {
+  color: var(--gray-200);
+  background: var(--gray-400);
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 3px 9px;
+  margin-left: 0.2.5rem;
+}
+
+.taskBoard .taskLogs p:first-child + p {
+  color: var(--purple-300);
+  font-weight: bold;
+}
+
+.taskBoard .taskCards {
+  width: 50%;
+}
